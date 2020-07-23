@@ -1,0 +1,101 @@
+
+
+<div style="display:inline-block;margin-top: 20px;">
+  
+    
+  <mat-form-field>
+
+    <mat-select placeholder="select city" id="city" name="city" #city>
+      <mat-option [value]="city.name" *ngFor="let city of cities">{{city.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="warn" (click)="sendData(city.value)">submit</button>
+
+
+</div>
+
+
+  <div *ngIf="loading" >
+    <mat-spinner class="loader"></mat-spinner>
+  
+    <div style="color: red;text-align: center;"><h2>{{errorMsg}}</h2></div>
+  </div>
+
+
+<mat-card *ngFor="let user of data1.weather" class="card1" >
+  <div (click)="passData(data1.name)">
+   
+  <mat-card-title>Weather Details</mat-card-title>
+  <mat-card-content>
+    <mat-card-subtitle style="color: white;"><b>ID:</b> {{user.id}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b>Name:</b> {{data1.name}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b>Main: </b>{{user.main}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b>Description:</b> {{user.description}}</mat-card-subtitle>
+    <br>
+    
+  </mat-card-content>
+</div>
+
+</mat-card>
+
+
+
+<mat-card *ngFor="let user of data2.weather" class="card1">
+  <mat-card-title>Weather Details</mat-card-title>
+  <div (click)="passData(data2.name)">
+  <mat-card-content>
+    <mat-card-subtitle style="color: white;"><b>ID:</b> {{user.id}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b>Name:</b> {{data2.name}}</mat-card-subtitle>
+    <br>
+    
+    <mat-card-subtitle style="color: white;"><b>Main: </b>{{user.main}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b>Description:</b> {{user.description}}</mat-card-subtitle>
+    <br>
+    
+  </mat-card-content>
+</div>
+</mat-card>
+
+
+<mat-card *ngFor="let user of data3.weather" class="card1">
+  <mat-card-title>Weather Details</mat-card-title>
+  <div (click)="passData(data3.name)">
+  <mat-card-content>
+    <mat-card-subtitle style="color: white;"><b>ID:</b> {{user.id}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b>Name:</b> {{data3.name}}</mat-card-subtitle>
+    <br>
+   
+    <mat-card-subtitle style="color: white;"><b>Main: </b>{{user.main}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b>Description:</b> {{user.description}}</mat-card-subtitle>
+    <br>
+    
+  </mat-card-content>
+</div>
+</mat-card>
+
+
+
+<mat-card *ngFor="let user of data4.weather" class="card1">
+  <mat-card-title>Weather Details</mat-card-title>
+  <div (click)="passData(data4.name)">
+  <mat-card-content>
+    <mat-card-subtitle style="color: white;"><b>ID:</b> {{user.id}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b>Name:</b> {{data4.name}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b>Main: </b>{{user.main}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b>Description:</b> {{user.description}}</mat-card-subtitle>
+    <br>
+    
+  </mat-card-content>
+</div>
+</mat-card>

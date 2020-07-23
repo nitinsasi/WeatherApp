@@ -1,0 +1,27 @@
+.mat-card {
+    background-color: #0097A7;
+    color: cornsilk;
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+}
+button{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+mat-form-field{
+    margin-left: 40px;
+   
+}
+.loader {
+    position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: visible;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  }

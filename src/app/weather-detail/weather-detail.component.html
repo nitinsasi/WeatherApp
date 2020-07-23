@@ -1,0 +1,55 @@
+
+
+
+
+  <div *ngIf="loading" >
+    <mat-spinner class="loader"></mat-spinner>
+  
+    <div style="color: red;text-align: center;"><h2>{{errorMsg}}</h2></div>
+  </div>
+
+
+<mat-card *ngFor="let user of dataone.weather" class="card1" >
+   
+  <mat-card-title style="align-items: center;">Weather Details</mat-card-title>
+  <mat-card-content>
+    <mat-card-subtitle style="color: white;"><b>ID:</b> {{user.id}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b>City Name:</b> {{dataone.name}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b>Temperature:</b> {{dataone.main.temp}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b>Pressure:</b> {{dataone.main.pressure}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b>Humidity:</b> {{dataone.main.humidity}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b>minimum Temperature:</b> {{dataone.main.temp_min}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b>Maximum Temperature:</b> {{dataone.main.temp_max}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b>Visibility: </b>{{dataone.visibility}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b>Wind Speed:</b> {{dataone.wind.speed}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b>Wind deg:</b> {{dataone.wind.deg}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b>clouds:</b> {{dataone.clouds.all}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b>dt:</b> {{dataone.dt}}</mat-card-subtitle>
+    <br>
+    
+    <mat-card-subtitle style="color: white;"><b>sys country:</b> {{dataone.sys.country}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b>sys sunrise:</b> {{dataone.sys.sunrise}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b>sys sunset:</b> {{dataone.sys.sunset}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b>id:</b> {{dataone.id}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b> name:</b> {{dataone.name}}</mat-card-subtitle>
+    <br>
+    <mat-card-subtitle style="color: white;"><b> cod:</b> {{dataone.cod}}</mat-card-subtitle>
+    <br>
+  </mat-card-content>
+
+
