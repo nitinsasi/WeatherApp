@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { WeatherService } from '../Services/weather.service';
 import { Router } from '@angular/router';
 import {MatDialog,  MatDialogConfig } from '@angular/material/dialog';
+import { DialogComponent } from '../dialog/dialog.component';
 
 
 
@@ -20,9 +21,11 @@ export class DataListComponent implements OnInit {
    data3;
   data4;
   data1;
+  dataone;
+  data11;
   loading = false;
   
-  constructor(private _weather:WeatherService,private router:Router) { }
+  constructor(private _weather:WeatherService,private router:Router,public dialog: MatDialog) { }
 
   ngOnInit() {
    this.data1= this._weather.dataone;
@@ -37,6 +40,7 @@ export class DataListComponent implements OnInit {
      if(this.i==0)
      {
 this.data1 = data;
+
 this.i=this.i+1
      }
      else if(this.i==1)
@@ -53,12 +57,10 @@ this.i=this.i+1
 this.data3=data;
 this.i=this.i-3
      }
-      //this.weatherList=data
-      //this.data2=JSON.stringify(data) 
+      
       this.data1 =data;
-      console.log('testingt',this.data1);
+    
       this.loading = false;
-    console.log(data)
     },(error) => {
       this.errorMsg=error;
     })
@@ -67,8 +69,12 @@ this.i=this.i-3
 
   passData(name){
     console.log(name)
-this.router.navigate(['/viewDetail/'+name])
+//this.router.navigate(['/viewDetail/'+name])
 
+let dialogRef = this.dialog.open(DialogComponent, {
+  
+  data :name
+});
 
   }
 

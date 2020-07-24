@@ -16,6 +16,7 @@ import {MatButtonModule,MatTableModule,MatCardModule,
   MatToolbarModule,MatDialogModule,
   MatListModule,MatPaginatorModule,MatSortModule,MatIconModule,MatProgressSpinnerModule ,MatGridListModule} from '@angular/material';
 import { WeatherDetailComponent } from './weather-detail/weather-detail.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 
 @NgModule({
@@ -26,8 +27,10 @@ import { WeatherDetailComponent } from './weather-detail/weather-detail.componen
     FooterComponent,
     DataListComponent,
     WeatherDetailComponent,
+    DialogComponent,
     
   ],
+  entryComponents:[DialogComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -38,7 +41,8 @@ import { WeatherDetailComponent } from './weather-detail/weather-detail.componen
     MatDialogModule,MatListModule,
     MatPaginatorModule,MatSortModule,MatIconModule,MatGridListModule,MatProgressSpinnerModule
   ],
+ 
   providers: [WeatherService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
